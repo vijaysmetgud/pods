@@ -5,7 +5,7 @@ metadata:
   name: httpd-pod
 spec:
   containers:
-      image : httpd: 2.4.58-bookworm
+    - image : httpd: 2.4.58-bookworm
       ports:
         - name: httpd-pod
           containerport: 80
