@@ -11,16 +11,16 @@ spec:
   selector:
     matchLabels:
       app: jenkins
-      release: latest
+      release: jenkins:lts-jdk17
   template:
     metadata:
       name: jenkins-rs
       labels:
         app: jenkins
-        release: latest
+        release: jenkins:lts-jdk17
     spec:
       containers:
-        - image: jenkins/jenkins
+        - image: jenkins/jenkins:lts-jdk17
           name: jenkins
           ports:
             - containerPort: 8080
