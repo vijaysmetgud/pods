@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: jenkins
+  name: jenkins-rs
   labels:
     purpose: rs-demo
 spec:
