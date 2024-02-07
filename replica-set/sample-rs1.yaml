@@ -11,13 +11,11 @@ spec:
   selector:
     matchLabels:
       app: jenkins
-      release: jdk17
   template:
     metadata:
       name: jenkins-rs
       labels:
         app: jenkins
-        release: jdk17
     spec:
       containers:
         - image: jenkins/jenkins:jdk17
