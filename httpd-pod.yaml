@@ -5,7 +5,7 @@ metadata:
   name: httpd-pod
 spec:
   containers:
-    - name: httpd  
+    - name: httpd
       image: httpd:latest
       ports:
         - name: httpd-pod
