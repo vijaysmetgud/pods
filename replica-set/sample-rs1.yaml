@@ -19,21 +19,9 @@ spec:
         release: latest
     spec:
       containers:
-        - command:
-            - printenv
-          image: tomcat:latest
+        - image: tomcat:latest
           name: tomcat
           ports:
             - containerPort: 8080
               name: tpod
               protocol: TCP
-
-
-
-
-        
-    
-
-
-
-
