@@ -16,7 +16,7 @@ spec:
       name: tomcat-rs
       labels:
         app: tomcat-rs
-        release: latest 
+        release: latest
     spec:
       containers:
         - command:
@@ -32,6 +32,7 @@ spec:
             - containerPort: 8080
               name: tpod
               protocol: TCP
+
 
 
 
