@@ -7,8 +7,8 @@ spec:
   minReadySeconds: 10   
   selector:
     matchExpressions: 
-        operator: Exists
-        values: apachetomcat
+        operator: In        
+        values: tomcat
         key: latest
   template:
     metadata:
