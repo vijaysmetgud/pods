@@ -12,8 +12,7 @@ spec:
         key: latest
   template:
     metadata:
-      name: app 
-      labels: stable
+      name: app
     spec:
       activeDeadlineSeconds: 15
       containers:
