@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: tomcat
+  name: tomcat-rs
+  labels: purpose-rs demo
 spec:
   replicas: 3
   minReadySeconds: 10   
   selector:
-    matchExpressions: 
-        operator: In        
-        values: tomcat
-        key: latest
+    matchLabels: 
+      app: tomcat-rs
+      release: latest
   template:
     metadata:
-      name: app
+      name: tomcat-rs
     spec:
       activeDeadlineSeconds: 15
       containers:
@@ -21,7 +21,7 @@ spec:
             - name: MESSAGE
               value: "hello world"
           image: tomcat:latest
-          name: mycntr
+          name: tomcat
           ports:
             - containerPort: 8080
               name: tpod
