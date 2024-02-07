@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: tomcat-rs
-  purpose: rs demo
+  purpose: rs-demo
 spec:
   replicas: 3
   minReadySeconds: 10
