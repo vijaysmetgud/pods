@@ -2,26 +2,26 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: tomcat-rs
-  purpose: rs-demo
+  name: jenkins-rs
+  labels:
+    purpose: rs-demo
 spec:
   replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: tomcat
+      app: jenkins
       release: latest
   template:
     metadata:
-      name: tomcat-rs
+      name: jenkins-rs
       labels:
-        app: tomcat
+        app: jenkins
         release: latest
     spec:
       containers:
-        - image: tomcat:latest
-          name: tomcat
+        - image: jenkins/jenkins
+          name: jenkins
           ports:
             - containerPort: 8080
-              name: tpod
               protocol: TCP
