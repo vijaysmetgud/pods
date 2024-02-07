@@ -14,7 +14,6 @@ spec:
       release: v1.1
   template:
     metadata:
-      name: jenkins
       labels:
         app: jenkins
         release: v1.1
@@ -22,6 +21,7 @@ spec:
       containers:
         - image: jenkins/jenkins
           name: jenkins
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               protocol: TCP
