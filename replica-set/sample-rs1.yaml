@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: jenkins-rs
+  name: jenkins
   labels:
     purpose: rs-demo
 spec:
@@ -13,8 +13,8 @@ spec:
       app: jenkins
   template:
     metadata:
-      name: jenkins-rs
-      labels:
+      name: jenkins
+            labels:
         app: jenkins
     spec:
       containers:
