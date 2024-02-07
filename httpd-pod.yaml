@@ -9,5 +9,5 @@ spec:
       image: httpd:latest
       ports:
         - name: httpd-pod
-          containerport: 80
+          containerPort: 80
           protocol: TCP
