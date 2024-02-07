@@ -10,4 +10,4 @@ spec:
       ports:
         - name: httpd-pod
           containerport: 80
-            - protocol: TCP
+          protocol: TCP
