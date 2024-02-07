@@ -21,11 +21,6 @@ spec:
       containers:
         - command:
             - printenv
-            - whoami
-            - sudo apt update
-          env:
-            - name: MESSAGE
-              value: hello world
           image: tomcat:latest
           name: tomcat
           ports:
