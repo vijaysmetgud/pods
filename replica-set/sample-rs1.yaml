@@ -14,8 +14,10 @@ spec:
   template:
     metadata:
       name: tomcat-rs
+      labels:
+        app: tomcat-rs
+        release: latest 
     spec:
-      activeDeadlineSeconds: 15
       containers:
         - command:
             - printenv
