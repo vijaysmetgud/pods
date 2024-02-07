@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: tomcat-app
+spec:
+  replicas: 3
+  minReadySeconds: 10   
+  selector:
+    matchExpressions: 
+        operator: Exists
+        values: apachetomcat
+        key: latest
+  template:
+    metadata:
+      name: app 
+      labels: stable
+    spec:
+      activeDeadlineSeconds: 15
+      containers:
+        - command: ["printenv", "whoami", "sudo apt update"]  
+          env:
+            - name: MESSAGE
+              value: "hello world"
+          image: tomcat:latest
+          name: mycntr
+          ports:
+            - containerPort: 8080
+              name: tpod
+              protocol: TCP
+
+
+
+        
+    
+
+
+
+
