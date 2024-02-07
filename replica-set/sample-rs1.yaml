@@ -9,13 +9,13 @@ spec:
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: tomcat-rs
+      app: tomcat
       release: latest
   template:
     metadata:
       name: tomcat-rs
       labels:
-        app: tomcat-rs
+        app: tomcat
         release: latest
     spec:
       containers:
